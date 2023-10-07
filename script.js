@@ -59,7 +59,7 @@ function checkWinner(choicePlayer, choiceComputer) {
     } else if (
         (choicePlayer === "rock" && choiceComputer === "scissors") ||
         (choicePlayer === "paper" && choiceComputer === "rock") ||
-        (choicePlayer === "scissors" && choiceComputer === "rock")) {
+        (choicePlayer === "scissors" && choiceComputer === "paper")) {
         return "You win!"
     } else {
         return "You lose!"
