@@ -5,8 +5,9 @@ const winners = [];
 
 function game() {
     for (let i = 1; i <= 5; i++) {
-        playRound();
+        playRound(i);
     }
+    logWins();
 }
 
 // Computers Choice Function
@@ -36,11 +37,12 @@ function getUserChoice() {
     return input;
 }
 
-function playRound() {
+function playRound(round) {
     const playerSelection = getUserChoice();
     const computerSelection = getComputerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
     winners.push(winner);
+    logRound(playerSelection, computerSelection, winner, round);
 }
 
 // Validate Input Function
@@ -55,20 +57,27 @@ function validateInput(choice) {
 // Check Winner
 function checkWinner(choicePlayer, choiceComputer) {
     if (choicePlayer === choiceComputer) {
-        return "It's a tie!";
+        return "No one";
     } else if (
         (choicePlayer === "rock" && choiceComputer === "scissors") ||
         (choicePlayer === "paper" && choiceComputer === "rock") ||
         (choicePlayer === "scissors" && choiceComputer === "paper")) {
-        return "You win!"
+        return "Player"
     } else {
-        return "You lose!"
+        return "Computer"
     }
 }
 
 // Track Results
 function logWins() {
     console.log(winners);
+}
+
+function logRound(choicePlayer, choiceComputer, winner, round) {
+    console.log("Round ", round);
+    console.log("Player Chose: ", choicePlayer);
+    console.log("Computer Chose: ", choiceComputer);
+    console.log(winner, " Won the round!");
 }
 
 game();
