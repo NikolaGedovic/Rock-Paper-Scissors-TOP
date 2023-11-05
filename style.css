@@ -1,0 +1,59 @@
+body {
+  background-image: url("blob-scene-haikei.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  height: 600px;
+  width: 750px;
+  background-color: #252B48;
+  border-radius: 8%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.choices-section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.rock-btn,
+.paper-btn,
+.scissors-btn,
+#playAgain {
+  /* padding: 10px 30px 10px 30px; */
+  height: 60px;
+  width: 120px;
+  font-size: 19px;
+  font-weight: 900;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: #FECDA6;
+}
+
+.results-section {
+  height: 250px;
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#score,
+#results {
+  color: antiquewhite;
+  font-size: 30px;
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.47);
+}
